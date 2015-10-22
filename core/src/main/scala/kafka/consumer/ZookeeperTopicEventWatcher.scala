@@ -93,6 +93,8 @@ class ZookeeperTopicEventWatcher(val zkClient: ZkClient,
         }
       }
     }
+
+    override def handleSessionEstablishmentError(error: Throwable): Unit = ???
   }
 }
 

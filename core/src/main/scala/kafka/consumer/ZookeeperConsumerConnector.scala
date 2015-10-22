@@ -489,6 +489,7 @@ private[kafka] class ZookeeperConsumerConnector(val config: ConsumerConfig,
       // The child change watchers will be set inside rebalance when we read the children list.
     }
 
+    override def handleSessionEstablishmentError(error: Throwable): Unit = ???
   }
 
   class ZKTopicPartitionChangeListener(val loadBalancerListener: ZKRebalancerListener)
